@@ -29,14 +29,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12">
 
         {/* hero */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="mb-6 md:mb-12">
+          <h1 className="text-lg md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Welcome to <span className="text-blue-600">Keywords</span>
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-md md:text-lg text-gray-600 dark:text-gray-400">
             Understand phrases, analyze writing, and learn more about interesting words!
           </p>
         </div>
