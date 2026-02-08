@@ -1,5 +1,7 @@
 # Keywords
 
+![screenshot of keywords home page](public/images/screenshot1.png)
+
 an LLM-powered **language analysis platform** built with Next.js + Llama (AI) + Decap CMS: 
 - analyze phrases 
 - analyze writing samples 
@@ -8,6 +10,8 @@ an LLM-powered **language analysis platform** built with Next.js + Llama (AI) + 
 also comes with the ability to publish:
 - blog entries 
 - static pages
+
+![screenshot of keywords writing page](public/images/screenshot3.png)
 
 ## Features
 
@@ -21,11 +25,15 @@ also comes with the ability to publish:
 - **Multilingual**: works with English, Japanese, Spanish, French, German, and more
 - **Shareable**: share the result as a permalink (`/phrase?q=input`)
 
+![screenshot of keywords writing page](public/images/screenshot2.png)
+
 ### ✍️ Writing analysis (up to 50 words)
 - **Automatic**: language identification
 - **Summary**: simplified paraphrasing of original writing
 - **Vocabulary builder**: detects words at [CEFR](https://www.google.com/search?udm=50&aep=26&kgs=fecc2be505c47392&shndl=37&shmd=H4sIAAAAAAAA_3WNOw7CMAxA6coROnVGoqYLA-IukZsYJ1J-cgzhdByAU1FmxPqk997-NexHSzeZIj0oTl2ChsxTw1QjtfHqVWu7APTeZ26KGuxsS4JGKNYfq5RUAEMyzaOQUX9Pa8YQ55r5sHsP5l8gJGRqsApmtx2BS-FIbFjQBcoKy_OHmc3PDsWZ5Xxy9fv4AFCSedHBAAAA&shmds=v1_ATWGeeOfNqyjnimmtI3vge348qSl21i8Gszatpsx8BmUdPWfEA&source=sh%2Fx%2Faio%2Fm1%2F1&mstk=AUtExfBAieV9BPJoSB_e7NqzfEdGJ21sCz5u7QQTR1hGBupsywVFNMH5-W1G2U1mz5FgUQC-G7BsY_PlojUjHpIE3bskj2Gr2lSxQsJufaTIeKU3KM8qrmDGo-hstvhpIkHbIHY-jJvNB8RfiSVJH42jQQAvRMKrCdPewHHGRRh_2XNMtlrNH1cJmBg0rgRSpJY5r7aKnjxC-afLKY-W_1JgsEy0cdimIVTDB7k1GrGqk7n0CK9mzABafstm1n4SfXjnIywrBrmzy2Hdk3EgnhYfAP8iFM-09EGPXY1PmBOCHCJz3uOJ29OeIIgXCL3R1VtTMXnncWa-YmeXDA&mtid=ROWIafSDK-yIptQPuaGquA0&csuir=1&q=Show+brief+two+sentence+English+writing+samples+for+each+CEFR+level%3A+A1%2C+A2%2C+B1%2C+B2%2C+C1%2C+C2&atvm=2) B2+ level or higher
   - **Collapsibles**: expandable word details for clean UX
+
+![screenshot of keywords writing page](public/images/screenshot3.png)
 
 ### 📝 Blogging
 - **Decap CMS**: Git-based headless CMS
@@ -104,7 +112,7 @@ npm run dev
 - **Website**: [http://localhost:3000](http://localhost:3000)
 - **CMS Admin**: [http://localhost:3000/admin](http://localhost:3000/admin)
 
-## Project Structure
+## Structure
 
 ```
 keywords/
