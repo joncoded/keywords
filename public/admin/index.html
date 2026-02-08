@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+    <style>
+      /* Custom styling for better Decap CMS UI */
+      
+      /* Make tags display horizontally with wrapping */
+      [class*="ControlContainer"] [class*="ListControl"] {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        align-items: center !important;
+      }
+      
+      /* Style each tag as a compact pill */
+      [class*="ControlContainer"] [class*="ListItem"] {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        padding: 4px 10px !important;
+        background: #f3f4f6 !important;
+        border: 1px solid #d1d5db !important;
+        border-radius: 999px !important;
+        margin: 0 !important;
+        margin-top: 0 !important;
+        max-width: fit-content !important;
+        height: 28px !important;
+        min-height: 28px !important;
+      }
+      
+      /* Hide the toggle/expand button */
+      [class*="ControlContainer"] [class*="ListItem"] > button:first-of-type:not([class*="remove"]) {
+        display: none !important;
+      }
+      
+      /* Hide drag handle */
+      [class*="ControlContainer"] [class*="ListItem"] [class*="dragIcon"] {
+        display: none !important;
+      }
+      
+      /* Hide the expanded editing box - more aggressive */
+      [class*="ControlContainer"] [class*="ListItem"][class*="expanded"] > div:not([class*="TopBar"]),
+      [class*="ControlContainer"] [class*="ListItem"] > div[class*="NestedObjectControl"],
+      [class*="ControlContainer"] [class*="ListItem"] > div > div[class*="ControlContainer"],
+      [class*="ControlContainer"] [class*="ListItem"] > div[class*="ObjectControl"],
+      [class*="ControlContainer"] [class*="ListItem"] [class*="object-control"] {
+        display: none !important;
+        visibility: hidden !important;
+        position: absolute !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+      
+      /* Keep items always collapsed visually */
+      [class*="ControlContainer"] [class*="ListItem"] {
+        max-height: 28px !important;
+        overflow: visible !important;
+      }
+      
+      /* Hide "TAG" label */
+      [class*="ControlContainer"] [class*="ListItem"] label {
+        display: none !important;
+      }
+      
+      /* Make the input look like plain text */
+      [class*="ControlContainer"] [class*="ListItem"] input[type="text"] {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        width: auto !important;
+        min-width: 60px !important;
+        color: #374151 !important;
+        line-height: 1 !important;
+        height: auto !important;
+      }
+      
+      /* Style the remove button as X */
+      [class*="ControlContainer"] [class*="ListItem"] button[title*="Remove"] {
+        background: transparent !important;
+        border: none !important;
+        color: #6b7280 !important;
+        padding: 0 !important;
+        width: 14px !important;
+        height: 14px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        font-size: 16px !important;
+        line-height: 1 !important;
+      }
+      
+      [class*="ControlContainer"] [class*="ListItem"] button[title*="Remove"]:hover {
+        color: #ef4444 !important;
+      }
+      
+      /* Style the Add button */
+      [class*="ControlContainer"] [class*="ListControl"] > button {
+        background: #3b82f6 !important;
+        color: white !important;
+        border: none !important;
+        padding: 6px 12px !important;
+        border-radius: 6px !important;
+        font-size: 14px !important;
+        cursor: pointer !important;
+      }
+      
+      [class*="ControlContainer"] [class*="ListControl"] > button:hover {
+        background: #2563eb !important;
+      }
+      
+      /* Fix header blocking main container in editor */
+      .css-hn3jn7-EditorContainer {
+        top: 70px !important;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+}
+
+.dark {
+  --background: 0 0% 4%;
+  --foreground: 0 0% 93%;
+}
+
+body {
+  background-color: white;
+  color: rgb(17 24 39);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: var(--font-barlow-semi-condensed), system-ui, sans-serif;
+}
+
+.dark body {
+  background-color: rgb(3 7 18);
+  color: rgb(249 250 251);
+}

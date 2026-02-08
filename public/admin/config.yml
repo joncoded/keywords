@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local development - Run 'npx decap-server' in a separate terminal
+# This is automatically ignored in production
+local_backend: true
+
+# Media files
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Collections
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version of the title" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Tags", name: "tags", widget: "string", required: false, hint: "Separate tags with commas (e.g. language, welcome, tutorial)" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, hint: "Posts marked as draft or with future dates won't be published" }
+      - { label: "Body", name: "body", widget: "markdown", modes: ["rich_text", "raw"], 
+          buttons: ["bold", "italic", "code", "link", "heading-one", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"],
+          editor_components: ["image", "code-block"] }
+
+  - name: "pages"
+    label: "Static Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version (e.g., 'about' for /pages/about)" }
+      - { label: "Body", name: "body", widget: "markdown", modes: ["rich_text", "raw"] }
+
+  - name: "tags"
+    label: "Tag Descriptions"
+    folder: "content/tags"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Tag Name", name: "name", widget: "string", hint: "The tag name (must match tags used in blog posts)" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly version (lowercase, no spaces)" }
+      - { label: "Description", name: "description", widget: "text", required: false, hint: "Optional description shown on tag pages" }
