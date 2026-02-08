@@ -242,9 +242,9 @@ npm run dev
 
 This starts the CMS backend on port `8081` and Next.js on port `3000` (where it will hot-reload upon each save!)
 
-## API Routes
+### API 
 
-### POST /api/analyze-phrase
+#### POST /api/analyze-phrase
 
 Analyze a phrase or word for linguistic information:
 
@@ -274,7 +274,7 @@ Analyze a phrase or word for linguistic information:
 }
 ```
 
-### POST /api/analyze-writing
+#### POST /api/analyze-writing
 
 Analyze a text sample for difficult vocabulary:
 
@@ -392,25 +392,25 @@ Future enhancements 🚀:
 
 ## Troubleshooting
 
-### Issue: Groq API errors
+### Groq API errors
 
-**Solution**: Check your API key and rate limits (14,400 requests/day free tier)
+Check your API key and rate limits (14,400 requests/day free tier)
 
-### Issue: CMS not loading
+### CMS not loading
 
-**Solution**: Ensure `decap-server` is running and check browser console for errors
+Ensure `decap-server` is running and check browser console for errors
 
-### Issue: Dark mode not working
+### Dark mode not working
 
-**Solution**: Clear browser cache, check system theme preference
+Clear browser cache, check system theme preference
 
-### Issue: Build fails with TypeScript errors
+### Build fails with TypeScript errors
 
-**Solution**: Run `npm run type-check` to identify issues
+Run `npm run type-check` to identify issues
 
-### Issue: Tags not parsing correctly
+### Tags not parsing correctly
 
-**Solution**: Use comma-separated format: "tag1, tag2, tag3"
+Use comma-separated format: "tag1, tag2, tag3"
 
 ## Contributing
 
