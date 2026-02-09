@@ -17,7 +17,7 @@ export interface Page {
 }
 
 export function getAllPages(): Page[] {
-  // Check if directory exists
+  // check if directory exists
   if (!fs.existsSync(pagesDirectory)) {
     return []
   }
@@ -39,7 +39,7 @@ export function getAllPages(): Page[] {
       } as Page
     })
 
-  // Sort by title alphabetically
+  // sort by title alphabetically
   return allPagesData.sort((a, b) => a.title.localeCompare(b.title))
 }
 
