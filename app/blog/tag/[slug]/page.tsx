@@ -37,12 +37,12 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
       <div className="mb-8">
         <Link 
           href="/blog"
-          className="text-blue-600 dark:text-blue-400 hover:underline text-sm mb-4 inline-block"
+          className="text-red-600 dark:text-red-400 hover:underline text-sm mb-4 inline-block"
         >
           ← Back to blog
         </Link>
         <h1 className="text-4xl font-bold mb-2">
-          Tag: <span className="text-blue-600 dark:text-blue-400">{tagName}</span>
+          Tag: <span className="text-red-600 dark:text-red-400">{tagName}</span>
         </h1>
         {description && (
           <p className="text-gray-600 dark:text-gray-400 text-lg">
@@ -74,7 +74,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
             )}
             <div className="p-6">
 
-              <h2 className="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <h2 className="text-xl font-bold mb-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                 {post.title}
               </h2>
               

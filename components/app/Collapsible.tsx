@@ -20,7 +20,7 @@ export function Collapsible({ title, isOpen, onToggle, children, badge }: Collap
         <div className="flex items-center gap-3">
           <span className="text-lg font-semibold text-gray-900 dark:text-white">{title}</span>
           {badge && (
-            <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+            <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200">
               {badge}
             </span>
           )}

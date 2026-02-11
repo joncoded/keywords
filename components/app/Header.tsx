@@ -15,7 +15,7 @@ export function Header() {
           {/* skip to main content for a11y */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-red-600 focus:text-white focus:rounded-lg"
           >
             Skip to main content
           </a>
@@ -23,22 +23,22 @@ export function Header() {
           {/* logo */}
           <Link 
             href="/" 
-            className="text-xl font-bold text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            className="text-xl font-bold text-white hover:text-red-600 dark:hover:text-red-400 transition-colors"
           >
-            <span aria-hidden="true">🔑 字</span> Keywords
+            <span aria-hidden="true">🀄️</span> Keywords
           </Link>
 
           {/* desktop navigation */}
           <div className="hidden md:flex items-center gap-6">
             <Link
               href="/blog"
-              className="text-sm font-medium text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
             >
               Blog
             </Link>
             <Link
               href="/pages"
-              className="text-sm font-medium text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
             >
               Pages
             </Link>
@@ -68,14 +68,14 @@ export function Header() {
           <div className="md:hidden py-4 space-y-4 border-t border-gray-200 dark:border-gray-800">
             <Link
               href="/blog"
-              className="block text-sm font-medium text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="block text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/pages"
-              className="block text-sm font-medium text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="block text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Pages

@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         {/* link back to blog list */}
         <Link
           href="/blog"
-          className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-sm mb-6 inline-block"
+          className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-6 inline-block"
         >
           ← Back to blog
         </Link>
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <Link
                   key={tag}
                   href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="px-3 py-1 text-sm font-medium rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                  className="px-3 py-1 text-sm font-medium rounded-full bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800 transition-colors"
                 >
                   {tag}
                 </Link>
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
 
         {/* content */}
-        <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 dark:prose-pre:bg-gray-950 prose-img:rounded-lg">
+        <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-red-600 dark:prose-a:text-red-400 prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 dark:prose-pre:bg-gray-950 prose-img:rounded-lg">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {post.content}
           </ReactMarkdown>
@@ -115,10 +115,10 @@ export default async function BlogPostPage({ params }: PageProps) {
             {olderPost && (
               <Link
                 href={`/blog/${olderPost.slug}`}
-                className="group p-4 hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+                className="group p-4 hover:border-red-600 dark:hover:border-red-400 transition-colors"
               >
                 <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">← Older</div>
-                <div className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <div className="font-medium text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                   {olderPost.title}
                 </div>
               </Link>
@@ -128,10 +128,10 @@ export default async function BlogPostPage({ params }: PageProps) {
             {newerPost && (
               <Link
                 href={`/blog/${newerPost.slug}`}
-                className="group p-4 hover:border-blue-600 dark:hover:border-blue-400 transition-colors md:text-right md:ml-auto"
+                className="group p-4 hover:border-red-600 dark:hover:border-red-400 transition-colors md:text-right md:ml-auto"
               >
                 <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Newer →</div>
-                <div className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <div className="font-medium text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                   {newerPost.title}
                 </div>
               </Link>

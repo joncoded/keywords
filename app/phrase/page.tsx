@@ -123,7 +123,7 @@ function PhraseAnalysisComponent() {
           <p className="text-gray-600 dark:text-gray-400 mb-4">No phrase provided</p>
           <Link
             href="/"
-            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
           >
             ← Back to home
           </Link>
@@ -136,7 +136,7 @@ function PhraseAnalysisComponent() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Analyzing phrase...</p>
         </div>
       </div>
@@ -150,7 +150,7 @@ function PhraseAnalysisComponent() {
           <p className="text-red-600 dark:text-red-400 mb-4">{error}</p>
           <Link
             href="/"
-            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
           >
             ← Back to home
           </Link>
@@ -170,7 +170,7 @@ function PhraseAnalysisComponent() {
 
           <Link
             href="/"
-            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-sm mb-4 inline-block"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
           >
             ← Back to home
           </Link>        
@@ -184,7 +184,7 @@ function PhraseAnalysisComponent() {
         </div>
 
         {/* translation (with meaning) */}
-        <section className="mb-8 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
+        <section className="mb-8 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Meaning</h2>
           
           <p className="text-gray-700 dark:text-gray-300">{analysis.translation} ({analysis.meaning.charAt(0).toLowerCase() + analysis.meaning.slice(1)})</p>
@@ -214,7 +214,7 @@ function PhraseAnalysisComponent() {
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Examples</h2>
           <div className="space-y-4">
             {analysis.examples.map((example, index) => (
-              <div key={index} className="border-l-4 border-blue-600 pl-4">
+              <div key={index} className="border-l-4 border-red-600 pl-4">
                 <p className="text-gray-900 dark:text-white font-medium mb-1">{example.sentence}</p>
                 {example.romanization && (
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-1 font-mono">
@@ -308,7 +308,7 @@ export default function PhrasePage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
       </div>
     }>
       <PhraseAnalysisComponent />

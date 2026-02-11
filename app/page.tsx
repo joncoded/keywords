@@ -34,7 +34,7 @@ export default function Home() {
         {/* hero */}
         <div className="mb-6 md:mb-12">
           <h1 className="text-lg md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Welcome to <span className="text-blue-600">Keywords</span>
+            Welcome to <span className="text-red-600">Keywords</span>!
           </h1>
           <p className="text-md md:text-lg text-gray-600 dark:text-gray-400">
             Understand phrases, analyze writing, and learn more about interesting words!
@@ -56,7 +56,7 @@ export default function Home() {
             {latestPosts.length > 0 && (
               <Link
                 href="/blog"
-                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium"
+                className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm font-medium"
               >
                 View all →
               </Link>
@@ -91,7 +91,7 @@ export default function Home() {
                       {new Date(post.date).toISOString().split('T')[0]}
                     </time>
                     <Link href={`/blog/${post.slug}`}>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mt-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mt-2 hover:text-red-600 dark:hover:text-red-400 transition-colors line-clamp-2">
                         {post.title}
                       </h3>
                     </Link>
@@ -100,7 +100,7 @@ export default function Home() {
                       {post.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded"
+                          className="text-xs px-2 py-1 bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-300 rounded"
                         >
                           <Link href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}>{tag}</Link>
                         </span>

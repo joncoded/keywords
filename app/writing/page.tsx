@@ -133,7 +133,7 @@ function WritingAnalysisComponent() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Analyzing writing sample...</p>
         </div>
       </div>
@@ -174,7 +174,7 @@ function WritingAnalysisComponent() {
         </div>
 
         {/* translation / summary */}
-        <section className="mb-8 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6">
+        <section className="mb-8 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
             {analysis.translation === 'Already in English' ? 'Summary' : 'Translation & Summary'}
           </h2>
@@ -194,7 +194,7 @@ function WritingAnalysisComponent() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Vocabulary builder 
             </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-200 mb-4">{analysis.difficultWords.length} "difficult" (<a href="https://share.google/aimode/iAdpVwOHVMwv2P5bX" className="text-blue-600 hover:underline" target="_blank">CEFR level B2</a> or higher) word{analysis.difficultWords.length !== 1 ? 's' : ''} found</p>
+            <p className="text-sm text-gray-500 dark:text-gray-200 mb-4">{analysis.difficultWords.length} "difficult" (<a href="https://share.google/aimode/iAdpVwOHVMwv2P5bX" className="text-red-600 hover:underline" target="_blank">CEFR level B2</a> or higher) word{analysis.difficultWords.length !== 1 ? 's' : ''} found</p>
             <div className="space-y-4">
               {analysis.difficultWords.map((word, index) => (
                 <Collapsible
@@ -242,7 +242,7 @@ function WritingAnalysisComponent() {
                       </h3>
                       <div className="space-y-3">
                         {word.examples.map((example, exIndex) => (
-                          <div key={exIndex} className="border-l-4 border-blue-600 pl-3">
+                          <div key={exIndex} className="border-l-4 border-red-600 pl-3">
                             <p className="text-gray-700 dark:text-gray-300 text-sm">{example.sentence}</p>
                             {example.romanization && (
                               <p className="text-xs font-mono text-gray-500 dark:text-gray-500 mt-1">
@@ -331,7 +331,7 @@ export default function WritingPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
       </div>
     }>
       <WritingAnalysisComponent />

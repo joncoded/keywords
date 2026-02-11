@@ -13,7 +13,7 @@ export function Footer() {
             <p>
               <Link 
                 href="/" 
-                className="text-2xl text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="text-2xl text-white hover:text-red-600 dark:hover:text-red-400 font-bold transition-colors"
               >
                 Keywords            
               </Link>
@@ -24,7 +24,7 @@ export function Footer() {
             
           </div>
           <div>
-            <p className="text-md text-white">a <a href="https://joncoded.com" className="text-green-600 hover:underline" target="_blank" rel="noopener noreferrer">joncoded.com</a> and <a href="https://claude.ai" className="text-orange-600 hover:underline" target="_blank" rel="noopener noreferrer">claude.ai</a> project</p>
+            <p className="text-md text-white">a <a href="https://joncoded.com" className="text-green-600 hover:text-white hover:underline font-bold" target="_blank" rel="noopener noreferrer">joncoded.com</a> and <a href="https://console.groq.com/docs/model/llama-3.3-70b-versatile" className="hover:underline" target="_blank" rel="noopener noreferrer"><span className="text-orange-600 font-bold">groq</span>/<span className="text-blue-600 font-bold">llama</span></a> project</p>
           </div>
         </div>
         

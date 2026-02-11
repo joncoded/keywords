@@ -32,7 +32,7 @@ export default function PagesIndex() {
         <div className="mb-8">
           <Link
             href="/"
-            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-sm mb-4 inline-block"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
           >
             ← Back to home
           </Link>
@@ -46,7 +46,7 @@ export default function PagesIndex() {
               href={`/pages/${page.slug}`}
               className="block p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-shadow"
             >
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white hover:text-red-600 dark:hover:text-red-400 transition-colors">
                 {page.title}
               </h2>
             </Link>

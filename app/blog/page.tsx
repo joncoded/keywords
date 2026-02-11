@@ -32,7 +32,7 @@ export default function BlogPage() {
         <div className="mb-8">
           <Link
             href="/"
-            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 text-sm mb-4 inline-block"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
           >
             ← Back to home
           </Link>
@@ -63,7 +63,7 @@ export default function BlogPage() {
                   {new Date(post.date).toISOString().split('T')[0]}
                 </time>
                 <Link href={`/blog/${post.slug}`}>
-                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-2 mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white mt-2 mb-3 hover:text-red-600 dark:hover:text-red-400 transition-colors">
                     {post.title}
                   </h2>
                 </Link>
@@ -73,7 +73,7 @@ export default function BlogPage() {
                       <Link
                         key={tag}
                         href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+                        className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 hover:bg-red-200 dark:hover:bg-red-800 transition-colors"
                       >
                         {tag}
                       </Link>
