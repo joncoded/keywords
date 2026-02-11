@@ -31,7 +31,7 @@ export default async function TagPage({ params }: { params: Promise<{ slug: stri
   const description = getTagDescription(tagName)
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
       {/* link back to blog list */}
       <div className="mb-8">
