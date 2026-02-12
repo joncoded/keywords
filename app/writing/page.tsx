@@ -5,6 +5,7 @@ import { useState, useEffect, Suspense } from 'react'
 import ParagraphForm from '@/components/home/ParagraphForm'
 import { Collapsible } from '@/components/app/Collapsible'
 import { getCachedAnalysis, setCachedAnalysis } from '@/lib/cache'
+import Link from 'next/dist/client/link'
 
 interface Etymology {
   origin: string
@@ -155,18 +156,41 @@ function WritingAnalysisComponent() {
     )
   }
 
-  if (!analysis) return null
-
+  if (!analysis) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-gray-600 dark:text-gray-400 mb-4">No phrase provided</p>
+          <Link
+            href="/"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+          >
+            ← Back to home
+          </Link>
+        </div>
+      </div>
+    )
+  }
+  
   return (
     <div className="min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+          <p className="mb-8">
+            <Link
+              href="/"
+              className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+            >
+              ← Back to home
+            </Link>
+          </p>
 
         {/* writing heading */}
 
         <div className="mb-8">
         
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-            "{analysis.originalText}"
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+            {analysis.originalText}
           </h1>
 
           <p className="text-gray-500 dark:text-gray-300 mt-2">{analysis.language} writing</p>
