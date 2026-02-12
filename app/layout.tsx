@@ -25,8 +25,8 @@ const spectral = Spectral({
 })
 
 export const metadata: Metadata = {
-  title: "Keywords - Language Learning Platform",
-  description: "Analyze phrases, understand writing, and learn languages with AI-powered insights",
+  title: "Keywords - understand all writing",
+  description: "Understand phrases, analyze writing, and learn more about interesting words!",
 }
 
 export default function RootLayout({
