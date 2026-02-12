@@ -194,7 +194,7 @@ function WritingAnalysisComponent() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Vocabulary builder 
             </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-200 mb-4">{analysis.difficultWords.length} "difficult" (<a href="https://share.google/aimode/iAdpVwOHVMwv2P5bX" className="text-red-600 hover:underline" target="_blank">CEFR level B2</a> or higher) word{analysis.difficultWords.length !== 1 ? 's' : ''} found</p>
+            <p className="text-sm text-gray-500 dark:text-gray-200 mb-4">{analysis.difficultWords.length} "difficult" (<a href="https://share.google/aimode/iAdpVwOHVMwv2P5bX" className="text-red-600 hover:underline" target="_blank">CEFR level B1</a> or higher) word{analysis.difficultWords.length !== 1 ? 's' : ''} found</p>
             <div className="space-y-4">
               {analysis.difficultWords.map((word, index) => (
                 <Collapsible
