@@ -163,7 +163,7 @@ function WritingAnalysisComponent() {
           <p className="text-gray-600 dark:text-gray-400 mb-4">No phrase provided</p>
           <Link
             href="/"
-            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+            className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm inline-block"
           >
             ← Back to home
           </Link>
@@ -179,7 +179,7 @@ function WritingAnalysisComponent() {
           <p className="mb-8">
             <Link
               href="/"
-              className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
+              className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm inline-block"
             >
               ← Back to home
             </Link>

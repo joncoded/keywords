@@ -7,6 +7,7 @@ home page - main landing page
 import { Tabs } from '@/components/home/Tabs'
 import PhraseForm from '@/components/home/PhraseForm'
 import ParagraphForm from '@/components/home/ParagraphForm'
+import PanglishForm from '@/components/home/PanglishForm'
 import { getLatestPosts } from '@/lib/blog'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -24,6 +25,11 @@ export default function Home() {
       id: 'paragraph',
       label: 'Writing',
       content: <ParagraphForm />,
+    },
+    {
+      id: 'panglish',
+      label: 'Panglish',
+      content: <PanglishForm />,
     },
   ]
 

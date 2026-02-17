@@ -48,6 +48,11 @@ export default function PhraseForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <div className={`mb-4`}>
+        <p className={`text-md dark:text-gray-400 transition-opacity duration-300`}>
+          Analyze a word/phrase to detect its <strong>language</strong> + <strong>meaning</strong> + <strong>origins (etymology)</strong> + <strong>examples</strong> + <strong>synonyms</strong>
+        </p>        
+      </div>
       <div>
         <input
           type="text"

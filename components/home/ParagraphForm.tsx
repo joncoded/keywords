@@ -54,6 +54,11 @@ export default function ParagraphForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <div className={`mb-4`}>
+        <p className={`text-md dark:text-gray-400 transition-opacity duration-300`}>
+          Analyze a piece of writing to detect its <strong>language</strong> + <strong>meaning</strong> + <strong>vocabulary</strong>
+        </p>        
+      </div>
       <div>
         <textarea
           value={text}
