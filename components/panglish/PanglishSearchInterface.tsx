@@ -37,7 +37,7 @@ export default function PanglishSearchInterface() {
         return
       }
 
-      const response = await fetch('/api/translate', {
+      const response = await fetch('/api/panglish', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
