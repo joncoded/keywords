@@ -55,7 +55,7 @@ export default function PanglishTranslationResults({
         <h2 className="text-sm font-semibold text-green-600 dark:text-green-400 uppercase mb-2">
           Panglish Translation (tongue-shift)
         </h2>
-        <p className="text-2xl font-bold text-green-900 dark:text-green-100">
+        <p className="text-7xl font-bold text-green-900 dark:text-green-100">
           {result.translation}
         </p>
       </div>

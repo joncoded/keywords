@@ -117,10 +117,9 @@ export default function PanglishSearchInterface() {
               </Link>
               
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                {searchQuery}
+                Panglish
               </h1>
-              
-              <p className="text-gray-500 dark:text-gray-300 mt-2">Panglish translation</p>
+                            
             </div>
 
             <div className="mb-8">
