@@ -62,31 +62,13 @@ export default function PanglishTranslationResults({
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg border border-yellow-200 dark:border-yellow-700 p-6">
         <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-          📚 Etymology
+          ❗️ Grounds
         </h3>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
           {result.explanation}
         </p>
       </div>
 
-      {result.alternatives && result.alternatives.length > 0 && (
-        <div className="bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-700 p-6">
-          <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-            🔄 Alternates 
-          </h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">Note: alternatives may include some components from non-Germanic words ... trust but verify!</p>
-          <ul className="space-y-2">
-            {result.alternatives.map((alt, index) => (
-              <li 
-                key={index}
-                className="text-gray-700 dark:text-gray-300 pl-4 border-l-4 border-red-300 dark:border-red-600"
-              >
-                {alt}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   )
 }
