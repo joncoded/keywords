@@ -3,7 +3,7 @@ title: Adding Panglish into Keywords
 slug: panglish-to-keywords
 date: 2026-02-17T11:53:00.000-05:00
 tags: website, panglish, anglish
-draft: false
+draft: true
 ---
 Today I've added [Panglish](https://panglish.joncoded.com) to the Keywords suite of products, which now includes:
 
