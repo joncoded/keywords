@@ -1,7 +1,6 @@
 export interface TranslationResponse {
   translation: string
-  explanation: string
-  alternatives?: string[]
+  explanation: string  
 }
 
 export interface ApiResponse {

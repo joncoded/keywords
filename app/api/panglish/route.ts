@@ -24,27 +24,24 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const prompt = `You are a linguistic expert specializing in Germanic etymology. Your task is to translate English words and phrases into "Panglish", a version of English that uses only words with Germanic etymological roots, avoiding Latin, French, Greek, and other Romance or Classical borrowings. Try not to make the translations sound too "medieval" or "foreign", as the translations should be natural and understandable to contemporary English speakers. If a direct Germanic root isn't available, create a compound word or descriptive phrase using Germanic elements, e.g. "panda" can be calqued into "bear-cat" from Chinese. Provide a brief explanation of your key word choices and their Germanic roots. If there are interesting alternative translations that also follow the Germanic rule, list up to three of them. If the original word is already of Germanic origin, you can keep it as is, but still provide an explanation of its Germanic roots.
+    const prompt = `You are a linguistic expert specializing in Germanic etymology. Your task is to translate English words and phrases into a version of English that uses only words with Germanic etymological roots, avoiding Latin or Greek roots. The translation must include components whose roots are directly from Proto-Germanic, Proto-West-Germanic or some Scandinavian origins. No part of it must come from any Latin, Greek or any other roots. Also, try not to make the translations sound too "medieval" or "foreign", as the translations should be natural and understandable to contemporary English speakers. If a direct Germanic root isn't available, create a compound word or descriptive phrase using Germanic elements, e.g. "panda" can be calqued into "bear-cat" from Chinese, or "task" can be calqued into something like "work share". Provide a brief explanation of your key word choices and their Germanic roots. If the original word is already of Germanic origin, please keep it as is, but still provide an explanation of its Germanic roots.
 
     Input: "${query}"
 
-    Provide a Panglish translation following these rules:
-    1. Replace non-Germanic words with Germanic alternatives or calques
+    Provide a translation following these rules:
+    1. Replace non-Germanic words with calques that have only Germanic , if necessary 
     2. Use compound words when necessary (e.g., "telephone" → "far-speaker")
     3. Maintain the original meaning and context
     4. Keep it natural-sounding and understandable
     5. Replace any hyphenations with spaces to ensure the translation is a single, natural phrase
     6. Try to match the part of speech of the original word
 
-    Then, for the etymological explanation, show the translation's Germanic roots, and show why the original query was replaced or modified.
-
-    Finally, if there are alternatives for translations that also follow the Germanic rule, list up to three of them. Do not make translations with words that do not have Germanic roots.
+    Then, for the etymological explanation, show the translation's Germanic roots, and show why the original query was replaced or modified.    
 
     Format your response as JSON with this structure:
     {
       "translation": "the Panglish translation",
-      "explanation": "brief explanation of key word choices and their Germanic roots",
-      "alternatives": ["alternative Germanic translation 1", "alternative Germanic translation 2", "alternative Germanic translation 3"] 
+      "explanation": "brief explanation of key word choices and their Germanic roots"
     }
 
     Respond only with valid JSON, no additional text.`
