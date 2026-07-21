@@ -64,7 +64,7 @@ an LLM-powered "**language analysis platform**" built with Next.js + Llama (AI),
 
 - **Structure**: [Next.js 16.1.6](https://nextjs.org/) (App Router, React 19, TypeScript)
 - **Styling**: [Tailwind CSS 3.4.0](https://tailwindcss.com/) + [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin)
-- **LLM**: [Groq SDK 0.37.0](https://console.groq.com/) (llama-3.3-70b-versatile)
+- **LLM**: [Groq SDK 0.37.0](https://console.groq.com/) (openai/gpt-oss-120b)
 - **CMS**: [Decap CMS 3.10.0](https://decapcms.org/) (formerly Netlify CMS)
 - **Content**: [gray-matter](https://github.com/jonschlinkert/gray-matter), [react-markdown](https://github.com/remarkjs/react-markdown), [remark-gfm](https://github.com/remarkjs/remark-gfm)
 - **Theme**: [next-themes 0.4.6](https://github.com/pacocoursey/next-themes)

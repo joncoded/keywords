@@ -14,5 +14,5 @@ export const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY,
 })
 
-// Using llama-3.3-70b-versatile for multilingual support
-export const DEFAULT_MODEL = 'llama-3.3-70b-versatile'
+// Using openai/gpt-oss-120b for multilingual support
+export const DEFAULT_MODEL = 'openai/gpt-oss-120b'
