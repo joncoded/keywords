@@ -1,7 +1,7 @@
 /* 
 keywords by @joncoded (aka @jonchius)
 /app/layout.tsx
-base layout for the entire app - header, theme provider, fonts, etc
+root layout for the whole app - header, looks, etc
 */
 
 import type { Metadata } from "next"
@@ -25,8 +25,8 @@ const spectral = Spectral({
 })
 
 export const metadata: Metadata = {
-  title: "Keywords - understand all writing",
-  description: "Understand phrases, analyze writing, and learn more about interesting words!",
+  title: "Keywords - understand words and writing",
+  description: "Understand words and writing, as well as learn their roots!",
 }
 
 export default function RootLayout({

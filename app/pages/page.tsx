@@ -34,9 +34,9 @@ export default function PagesIndex() {
             href="/"
             className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
           >
-            ← Back to home
+            ← Go back
           </Link>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Pages</h1>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">More</h1>
         </div>
 
         <div className="space-y-4">

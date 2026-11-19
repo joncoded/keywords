@@ -1,7 +1,7 @@
 /* 
 keywords by @joncoded (aka @jonchius)
 /app/page.tsx
-home page - main landing page
+home - main landing screen
 */
 
 import { Tabs } from '@/components/home/Tabs'
@@ -9,16 +9,16 @@ import PhraseForm from '@/components/home/PhraseForm'
 import ParagraphForm from '@/components/home/ParagraphForm'
 import PanglishForm from '@/components/home/PanglishForm'
 import { getLatestPosts } from '@/lib/blog'
-import Link from 'next/link'
-import Image from 'next/image'
+// import Link from 'next/link'
+// import Image from 'next/image'
 
 export default function Home() {
-  const latestPosts = getLatestPosts(6)
+  // const latestPosts = getLatestPosts(6)
 
   const analysisTabs = [
     {
       id: 'phrase',
-      label: 'Phrase',
+      label: 'Words',
       content: <PhraseForm />,
     },
     {
@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       id: 'panglish',
-      label: 'Panglish',
+      label: 'English-to-Anglish',
       content: <PanglishForm />,
     },
   ]
@@ -43,7 +43,7 @@ export default function Home() {
             Welcome to <span className="text-red-600">Keywords</span>!
           </h1>
           <p className="text-md md:text-lg text-gray-600 dark:text-gray-400">
-            Understand phrases, analyze writing, and learn more about interesting words!
+            Understand <strong>words</strong> and <strong>writing</strong>, as well as learn their <strong>roots</strong>!
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Home() {
           {latestPosts.length === 0 ? (
             <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-800/50">
               <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                No blog posts yet. Check back soon!
+                no blog posts yet - come back later!
               </p>
             </div>
           ) : (

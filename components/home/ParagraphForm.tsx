@@ -1,7 +1,7 @@
 /* 
 keywords by @joncoded (aka @jonchius)
 /components/home/ParagraphForm.ts
-paragraph form with rate limiting
+long worded form with "rate limiting"
 */
 
 'use client'
@@ -56,7 +56,7 @@ export default function ParagraphForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className={`mb-4`}>
         <p className={`text-md dark:text-gray-400 transition-opacity duration-300`}>
-          Analyze a piece of writing to detect its <strong>language</strong> + <strong>meaning</strong> + <strong>vocabulary</strong>
+          Look more closely at your writing and words to find their <strong>roots</strong> and <strong>meanings</strong>: 
         </p>        
       </div>
       <div>
@@ -67,7 +67,7 @@ export default function ParagraphForm() {
             // clear error when user types
             setRateLimitError(null) 
           }}
-          placeholder="Enter your writing sample (max 50 words)"
+          placeholder="Input your writing (at most 50 words)"
           rows={6}
           className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent dark:bg-gray-700 dark:text-white resize-none"
           disabled={isSubmitting}
@@ -90,7 +90,7 @@ export default function ParagraphForm() {
         disabled={!isValid || isSubmitting}
         className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
       >
-        {isSubmitting ? 'Analyzing...' : 'Analyze'}
+        {isSubmitting ? 'Working...' : 'Look into it'}
       </button>
     </form>
   )

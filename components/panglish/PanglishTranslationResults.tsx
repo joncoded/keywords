@@ -46,14 +46,14 @@ export default function PanglishTranslationResults({
 
       <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-indigo-900/20 rounded-lg border-2 border-green-200 dark:border-green-800 p-6">
         <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2">
-          Original English
+          Today's English
         </h2>
         <p className="text-lg font-medium text-gray-900 dark:text-gray-100 mb-6">
           {query}
         </p>
         
         <h2 className="text-sm font-semibold text-green-600 dark:text-green-400 uppercase mb-2">
-          Panglish Translation (tongue-shift)
+          (P)anglish Tongue-shift (translation)
         </h2>
         <p className="text-7xl font-bold text-green-900 dark:text-green-100">
           {result.translation}

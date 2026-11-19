@@ -6,4 +6,4 @@ image: ""
 tags: website
 draft: false
 ---
-Welcome to **Keywords**, your AI-powered language learning companion!
+Welcome to **Keywords**, your big word tool!

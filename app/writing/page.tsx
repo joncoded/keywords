@@ -91,7 +91,7 @@ function WritingAnalysisComponent() {
         })
 
         if (!response.ok) {
-          throw new Error('Failed to analyze writing')
+          throw new Error('Could not look into those words! Let\'s look it again later?')
         }
 
         const data = await response.json()
@@ -101,7 +101,7 @@ function WritingAnalysisComponent() {
         setCachedAnalysis('writing', text, data)
 
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred')
+        setError(err instanceof Error ? err.message : 'Something odd happened! Let\`s look it again later?')
       } finally {
         setLoading(false)
       }
@@ -116,10 +116,10 @@ function WritingAnalysisComponent() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Analyze writing
+              Look into the writing
             </h1>
             <p className="text-gray-600 dark:text-gray-400">
-              Submit a writing sample to analyze difficult words and get explanations!
+              Input some tough words to understand them!
             </p>
           </div>
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
@@ -135,7 +135,7 @@ function WritingAnalysisComponent() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Analyzing writing sample...</p>
+          <p className="text-gray-600 dark:text-gray-400">Looking into the writing...</p>
         </div>
       </div>
     )
@@ -160,12 +160,12 @@ function WritingAnalysisComponent() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-600 dark:text-gray-400 mb-4">No phrase provided</p>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">No words given</p>
           <Link
             href="/"
             className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm inline-block"
           >
-            ← Back to home
+            ← Go back
           </Link>
         </div>
       </div>
@@ -181,7 +181,7 @@ function WritingAnalysisComponent() {
               href="/"
               className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm inline-block"
             >
-              ← Back to home
+              ← Go back
             </Link>
           </p>
 
@@ -200,15 +200,15 @@ function WritingAnalysisComponent() {
         {/* translation / summary */}
         <section className="mb-8 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-            {analysis.translation === 'Already in English' ? 'Summary' : 'Translation & Summary'}
+            {analysis.translation === 'Already in English' ? 'Outline' : 'Word-shifting'}
           </h2>
           {analysis.translation !== 'Already in English' && (
             <p className="text-gray-700 dark:text-gray-300 mb-3">
-              <span className="font-medium">Translation:</span> {analysis.translation}
+              <span className="font-medium">English:</span> {analysis.translation}
             </p>
           )}
           <p className="text-gray-700 dark:text-gray-300">
-            <span className="font-medium">Simple explanation:</span> {analysis.summary}
+            <span className="font-medium">Gist:</span> {analysis.summary}
           </p>
         </section>
 
@@ -216,7 +216,7 @@ function WritingAnalysisComponent() {
         {analysis.difficultWords.length > 0 && (
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Vocabulary builder 
+              Word teacher
             </h2>
             <p className="text-sm text-gray-500 dark:text-gray-200 mb-4">{analysis.difficultWords.length} "difficult" (<a href="https://share.google/aimode/iAdpVwOHVMwv2P5bX" className="text-red-600 hover:underline" target="_blank">CEFR level B1</a> or higher) word{analysis.difficultWords.length !== 1 ? 's' : ''} found</p>
             <div className="space-y-4">
@@ -249,13 +249,13 @@ function WritingAnalysisComponent() {
                     {/* etymology */}
                     <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
                       <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        Etymology
+                        Roots
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        <span className="font-medium">Origin:</span> {word.etymology.origin}
+                        <span className="font-medium">From:</span> {word.etymology.origin}
                       </p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        <span className="font-medium">History:</span> {word.etymology.history}
+                        <span className="font-medium">Pathways:</span> {word.etymology.history}
                       </p>
                     </div>
 
@@ -286,7 +286,7 @@ function WritingAnalysisComponent() {
                     {/* rephrasing */}
                     <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
                       <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                        Simplified: 
+                        In other words: 
                       </h3>
                       <p className="text-gray-700 dark:text-gray-300">{word.rephrasing}</p>
                     </div>

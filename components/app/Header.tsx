@@ -17,7 +17,7 @@ export function Header() {
             href="#main-content"
             className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-red-600 focus:text-white focus:rounded-lg"
           >
-            Skip to main content
+            skip to the main stuff
           </a>
 
           {/* logo */}
@@ -40,7 +40,7 @@ export function Header() {
               href="/pages"
               className="text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
             >
-              Pages
+              More
             </Link>
             <ThemeToggle />
           </div>
@@ -66,19 +66,19 @@ export function Header() {
         {/* mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4 border-t border-gray-200 dark:border-gray-800">
-            <Link
+            {/* <Link
               href="/blog"
               className="block text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
-            </Link>
+            </Link> */}
             <Link
               href="/pages"
               className="block text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Pages
+              More
             </Link>
             <div className="pt-2">
               <ThemeToggle />

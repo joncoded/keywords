@@ -97,7 +97,7 @@ function PhraseAnalysisComponent() {
         })
 
         if (!response.ok) {
-          throw new Error('Failed to analyze phrase')
+          throw new Error('Could not look into those words! Let\'s look it again later?')
         }
 
         const data = await response.json()
@@ -107,7 +107,7 @@ function PhraseAnalysisComponent() {
         setCachedAnalysis('phrase', phrase, data)
         
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred')
+        setError(err instanceof Error ? err.message : 'Something odd happened! Let\`s look it again later?')
       } finally {
         setLoading(false)
       }
@@ -125,7 +125,7 @@ function PhraseAnalysisComponent() {
             href="/"
             className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
           >
-            ← Back to home
+            ← Go back
           </Link>
         </div>
       </div>
@@ -137,7 +137,7 @@ function PhraseAnalysisComponent() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Analyzing phrase...</p>
+          <p className="text-gray-600 dark:text-gray-400">Looking into it...</p>
         </div>
       </div>
     )
@@ -152,7 +152,7 @@ function PhraseAnalysisComponent() {
             href="/"
             className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
           >
-            ← Back to home
+            ← Go back
           </Link>
         </div>
       </div>
@@ -172,14 +172,14 @@ function PhraseAnalysisComponent() {
             href="/"
             className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
           >
-            ← Back to home
+            ← Go back
           </Link>        
 
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
             {phrase}
           </h1>
 
-          <p className="text-gray-500 dark:text-gray-300 mt-2">{analysis.language} phrase</p>
+          <p className="text-gray-500 dark:text-gray-300 mt-2">{analysis.language} wording</p>
           
         </div>
 
@@ -192,18 +192,18 @@ function PhraseAnalysisComponent() {
 
         {/* etymology */}
         <section className="mb-8 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-6">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Etymology</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Roots</h2>
           <div className="space-y-3">
             <div>
-              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Origin</h3>
+              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">From</h3>
               <p className="text-gray-700 dark:text-gray-300">{analysis.etymology.origin}</p>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">History</h3>
+              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Pathways</h3>
               <p className="text-gray-700 dark:text-gray-300">{analysis.etymology.history}</p>
             </div>
             <div>
-              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Evolution</h3>
+              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Background</h3>
               <p className="text-gray-700 dark:text-gray-300">{analysis.etymology.evolution}</p>
             </div>
           </div>
@@ -211,7 +211,7 @@ function PhraseAnalysisComponent() {
 
         {/* examples */}
         <section className="mb-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Examples</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Among words</h2>
           <div className="space-y-4">
             {analysis.examples.map((example, index) => (
               <div key={index} className="border-l-4 border-red-600 pl-4">
@@ -223,7 +223,7 @@ function PhraseAnalysisComponent() {
                 )}
                 {example.translation && (
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-1">
-                    Translation: {example.translation}
+                    English: {example.translation}
                   </p>
                 )}
                 <p className="text-gray-500 dark:text-gray-500 text-sm">{example.context}</p>
@@ -234,7 +234,7 @@ function PhraseAnalysisComponent() {
 
         {/* synonyms */}
         <section className="mb-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Synonyms</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">In other words</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {analysis.synonyms.map((synonym, index) => (
               <div key={index} className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
@@ -254,17 +254,17 @@ function PhraseAnalysisComponent() {
         {analysis.inflections && (
           <section className="mb-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-              Inflections ({analysis.inflections.type})
+              Spinoffs  ({analysis.inflections.type})
             </h2>
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                 <thead>
                   <tr>
                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                      Form
+                      Kind
                     </th>
                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                      Value
+                      "Inflection"
                     </th>
                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                       Translation

@@ -34,7 +34,7 @@ export default function BlogPage() {
             href="/"
             className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
           >
-            ← Back to home
+            ← Go back
           </Link>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">Blog</h1>
           <p className="text-gray-600 dark:text-gray-400">

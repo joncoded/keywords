@@ -17,7 +17,7 @@ export default function PanglishSearchBar({ onSearch, onReset, isCompact = false
     
     const wordCount = query.trim().split(/\s+/).filter(Boolean).length
     if (!query.trim()) {
-      setError('Please enter a word or phrase')
+      setError('Input a word or some words')
       return
     }
     if (wordCount > 20) {
@@ -49,7 +49,7 @@ export default function PanglishSearchBar({ onSearch, onReset, isCompact = false
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Enter an English word or phrase..."
+          placeholder="Input an English word or words..."
           className={`w-full px-6 text-lg border-2 border-gray-300 dark:border-gray-600 
             rounded-full bg-white dark:bg-gray-800 
             focus:outline-none focus:border-red-500 dark:focus:border-red-400
@@ -59,6 +59,15 @@ export default function PanglishSearchBar({ onSearch, onReset, isCompact = false
             ${(query || isCompact) ? 'pr-44 sm:pr-40' : 'pr-32'}`}
         />
         <div className="absolute right-2 top-1/2 -translate-y-1/2 flex gap-2">
+          <button
+            type="submit"
+            className={`bg-red-500 hover:bg-red-600 text-white font-semibold
+              rounded-full transition-all duration-200
+              ${isCompact ? 'px-2 py-2 text-sm' : 'px-4 py-3'}`}
+            title="Make it Anglish"
+          >
+            Tongue-shift!
+          </button>
           {(query || isCompact) && (
             <button
               type="button"
@@ -66,20 +75,11 @@ export default function PanglishSearchBar({ onSearch, onReset, isCompact = false
               className={`bg-gray-500 hover:bg-gray-600 text-white font-semibold
                 rounded-full transition-all duration-200
                 ${isCompact ? 'px-2 py-2 text-sm' : 'px-4 py-3 text-sm'}`}
-              title="Clear and start new search"
+              title="Start a new lookup"
             >
-              Clear
+              New lookup
             </button>
           )}
-          <button
-            type="submit"
-            className={`bg-red-500 hover:bg-red-600 text-white font-semibold
-              rounded-full transition-all duration-200
-              ${isCompact ? 'px-2 py-2 text-sm' : 'px-4 py-3'}`}
-            title="Translate to Panglish"
-          >
-            Translate
-          </button>
         </div>
       </div>
       {error && (

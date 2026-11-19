@@ -5,20 +5,13 @@ slug: about
 
 ## About Keywords
 
-Keywords is a large language model (LLM)-powered language learning tool that helps you:
+**Keywords** is a word-learning tool that helps:
 
-- **Analyze phrases** - Get etymology, examples, synonyms, and inflections for any phrase
-- **Understand writing** - Identify difficult words (CEFR B1+) in your text with detailed explanations
-- **Learn languages** - Support for multilingual input with romanization
+- **look into words** - find more about the roots, as well see how and when they are written, along with any other "inflections" (word shiftings)
+- **understand writing** - look into the tough words (CEFR B1+) in your writing 
+- **learn other tongues** - many-tongued input with "romanization" for those that write in other "alphabets"
 
-Think of it as a dictionary robot that has had lots and lots of coffee!!! 📚☕️
-
-### Features
-
-- Phrase analysis with linguistic insights
-- Writing analysis highlighting challenging vocabulary
-- Blog with language-related articles
-- Powered by Groq's LLaMA 3.3 model
+think of it as a "dictionary" after drinking lots of strong brews!!! 📚☕️
 
 ### Technology
 
@@ -28,4 +21,4 @@ For those who care, this website was built with:
 - TypeScript
 - Tailwind CSS
 - Decap CMS
-- Groq LLM
+- Groq (not Grok) LLaMA 3.3

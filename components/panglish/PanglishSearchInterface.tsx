@@ -48,13 +48,13 @@ export default function PanglishSearchInterface() {
       const data = await response.json()
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to translate')
+        throw new Error(data.error || 'Could not translate - maybe swap some words?')
       }
 
       setResult(data.data)
       setCachedTranslation(query, data.data)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An unexpected error occurred')
+      setError(err instanceof Error ? err.message : 'Something odd happened - load again?')
     } finally {
       setIsLoading(false)
     }
@@ -83,7 +83,7 @@ export default function PanglishSearchInterface() {
         <div className="min-h-screen flex flex-col items-center justify-center px-4">
           <div className="w-full max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-center">
-              Welcome to Panglish
+              Welcome to (P)anglish
             </h1>
             <p className="text-lg text-gray-500 dark:text-gray-500 my-2 text-center">
               (<strong>Panglish</strong> = <em className="mr-1">&quot;Pan-&quot;</em> [&quot;all&quot;] + &quot;English&quot;)
@@ -113,11 +113,11 @@ export default function PanglishSearchInterface() {
                 href="/"
                 className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 text-sm mb-4 inline-block"
               >
-                ← Back to home
+                ← Go back
               </Link>
               
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                Panglish
+                (P)anglish
               </h1>
                             
             </div>
