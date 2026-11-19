@@ -30,12 +30,12 @@ export function Header() {
 
           {/* desktop navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <Link
+            {/* <Link
               href="/blog"
               className="text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
             >
               Blog
-            </Link>
+            </Link> */}
             <Link
               href="/pages"
               className="text-sm font-medium text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition-colors"
