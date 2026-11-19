@@ -55,7 +55,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* blog */}
+        {/* blog: roughed in
         <section className="mt-12">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">From the blog</h2>
@@ -119,6 +119,7 @@ export default function Home() {
             </div>
           )}
         </section>
+         */}
       </div>
     </div>
   )
