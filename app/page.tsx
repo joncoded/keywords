@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       id: 'panglish',
-      label: 'English-to-Anglish',
+      label: 'Panglish',
       content: <PanglishForm />,
     },
   ]

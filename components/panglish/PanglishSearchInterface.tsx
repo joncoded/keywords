@@ -83,7 +83,7 @@ export default function PanglishSearchInterface() {
         <div className="min-h-screen flex flex-col items-center justify-center px-4">
           <div className="w-full max-w-2xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-4 text-center">
-              Welcome to (P)anglish
+              Welcome to Panglish
             </h1>
             <p className="text-lg text-gray-500 dark:text-gray-500 my-2 text-center">
               (<strong>Panglish</strong> = <em className="mr-1">&quot;Pan-&quot;</em> [&quot;all&quot;] + &quot;English&quot;)
@@ -117,7 +117,7 @@ export default function PanglishSearchInterface() {
               </Link>
               
               <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                (P)anglish
+                Panglish
               </h1>
                             
             </div>

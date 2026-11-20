@@ -28,10 +28,13 @@ export default function PanglishForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className={`mb-4`}>
         <p className={`text-md dark:text-gray-400 mb-1 transition-opacity duration-300`}>
-          Input English words and to output only <strong>words with old (Germanic) roots</strong>
+          <strong>Panglish</strong> writes English words with Germanic roots in a way that any English speaker can understand: 
+        </p>
+        <p className={`text-md dark:text-gray-400 mb-1 transition-opacity duration-300`}>
+          Below, input English words to output <strong>only words with Germanic roots</strong>!
         </p>
         <p className={`text-sm text-gray-600 dark:text-gray-500`}>
-          (e.g. &quot;translation&quot; → &quot;tongue-shift&quot;, &quot;philosophy&quot; → &quot;mind-lore&quot;, &quot;language&quot; → &quot;tongue&quot;)
+          (e.g. &quot;translation&quot; → &quot;tongue-shift&quot;)
         </p>
       </div>
       <div>
@@ -41,7 +44,7 @@ export default function PanglishForm() {
           onChange={(e) => {
             setPhrase(e.target.value)
           }}
-          placeholder="Input a 'modern' English word or group of words (at most 20 words)"
+          placeholder="Input any English word(s) - at most 20"
           className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
           disabled={isSubmitting}
         />
@@ -57,7 +60,7 @@ export default function PanglishForm() {
         disabled={!isValid || isSubmitting}
         className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
       >
-        {isSubmitting ? 'Translating...' : 'Translate to Anglish'}
+        {isSubmitting ? 'Translating...' : 'Translate to Panglish'}
       </button>
     </form>
   )
